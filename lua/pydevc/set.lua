@@ -1,0 +1,33 @@
+lvim.opt.al global = vim.g
+
+vim.opt.autoindent = true
+vim.opt.clipboard = "unnamedplus"
+vim.opt.completeopt = "menu,preview,noinsert"
+vim.opt.guicursor = "a:blinkon100"
+vim.opt.icon = true
+vim.opt.inccommand = "split"
+vim.opt.mouse = "a"
+vim.opt.ruler = true
+vim.opt.hidden = true
+vim.opt.showcmd = true
+vim.opt.showmatch = true
+vim.opt.smartindent = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.syntax = "on"
+vim.opt.termguicolors = true
+vim.opt.title = true
+vim.opt.shiftwidth = 4
+vim.opt.scrolloff = 12
+vim.opt.expandtab = true
+vim.opt.undofile = true
+vim.opt.wrap = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 100
+vim.opt.colorcolumn = "20"
+
