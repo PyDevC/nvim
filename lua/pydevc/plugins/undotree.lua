@@ -1,3 +1,6 @@
 return {
-	config = function() end,
+	""
+	config = function()
+    vim.keymap.set("n", "<leader>"u, undotree.toggle)
+  end,
 }
