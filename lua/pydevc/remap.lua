@@ -1,4 +1,6 @@
-vim.g.mapleader = " "
+local global = vim.g
+
+global.mapleader = " "
 
 local function map(mode, lhs, rhs, opt)
 	opts = opts or {}

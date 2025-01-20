@@ -1,7 +1,7 @@
-lvim.opt.al global = vim.g
+global = vim.g
 
 vim.opt.autoindent = true
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamed"
 vim.opt.completeopt = "menu,preview,noinsert"
 vim.opt.guicursor = "a:blinkon100"
 vim.opt.icon = true
@@ -29,5 +29,5 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 100
-vim.opt.colorcolumn = "20"
+vim.opt.colorcolumn = "80"
 
