@@ -1,3 +1,7 @@
+function hidden_files()
+    -- searches for only hidden files except git files
+end
+
 return {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.8",
