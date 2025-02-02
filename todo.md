@@ -1,18 +1,27 @@
 # TODO
 
 - Python code runner and path manager
-- Lsp
 - a good ascii particle system for the startup and flex
-- Testing 
 - CI/CD
 - window options
 - advanced telescope
 - quickfix list
-- diagnostics
 - right click menu
-- harpoon
-- treesitter
-- code formatter
-- code snippets
-- custom code snippets
 - git graph and functionalities maybe fugitive 
+
+## plugins
+
+- oil.nvim
+- vim-fugitive
+- nvim-treesitter
+- neogen
+- harpoon
+- undotree
+- gitsigns.nvim
+- nvim-cmp
+- telescope-import.nvim
+- quicktest.nvim
+- nvim-dap
+- telescope.nvim
+- GPTModels.nvim
+- glow.nvim
