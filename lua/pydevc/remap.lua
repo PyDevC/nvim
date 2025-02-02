@@ -11,9 +11,6 @@ end
 -- Exit to file list
 map("n", "<leader>pv", vim.cmd.Ex)
 
--- Escape insert mode
-map("i", "jk", "<ESC>")
-
 -- Basic commands
 map("n", "<leader>w", "<CMD>w<CR>")
 map("n", "<leader>q", "<CMD>q<CR>")
