@@ -10,7 +10,6 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 
 		nvim_lsp.pyright.setup({})
-		nvim_lsp.bashls.setup({})
 		nvim_lsp.lua_ls.setup({})
 		nvim_lsp.pylsp.setup({})
 
