@@ -12,7 +12,7 @@ return {
 				enable = true,
 			},
 		})
-		vim.keymap.set("n", "<leader>i", ":Inspect")
-		vim.keymap.set("n", "<leader>it", ":InspectTree")
+		vim.keymap.set("n", "<leader>i", "<cmd>Inspect<CR>")
+		vim.keymap.set("n", "<leader>it", "<cmd>InspectTree<CR>")
 	end,
 }
