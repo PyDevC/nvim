@@ -74,7 +74,7 @@ function M.setup()
 
   -- Syntax
   set(0, 'Comment', { fg = p.base4 })
-  set(0, 'String', { fg = p.green })
+  set(0, 'String', { fg = p.yellow })
   set(0, 'Function', { fg = p.cyan })
   set(0, 'Identifier', { fg = p.base8 })
   set(0, 'Keyword', { fg = p.teal })

@@ -4,6 +4,9 @@ return {
   config = function()
     require("lualine").setup({
       options = { theme = "compline" },
+      sections = {
+        lualine_c = { {'filename', path=1} },
+      },
     })
   end,
 }
