@@ -3,77 +3,10 @@ return {
     "neovim/nvim-lspconfig",
     event = 'VimEnter',
     dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
       { "j-hui/fidget.nvim", opts = {} },
       "b0o/SchemaStore.nvim",
     },
     config = function()
-      local capabilities = nil
-      if pcall(require, "cmp_nvim_lsp") then
-        capabilities = require("cmp_nvim_lsp").default_capabilities()
-      end
-
-      local lspconfig = require "lspconfig"
-      local servers = {
-        jsonls = {
-          settings = {
-            json = {
-              schemas = require("schemastore").json.schemas(),
-              validate = { enable = true },
-            },
-          },
-        },
-
-        yamlls = {
-          settings = {
-            yaml = {
-              schemaStore = {
-                enable = false,
-                url = "",
-              },
-              schemas = require("schemastore").yaml.schemas(),
-            },
-          },
-        },
-
-        clangd = {
-          init_options = { clangdFileStatus = true },
-          filetypes = { "c", "cpp" },
-        },
-
-        lua_ls = {},
-        pyright = {},
-      }
-
-      require("mason-lspconfig").setup({
-        ensure_installed = vim.tbl_keys(servers),
-        handlers = {
-          function(server_name)
-            lspconfig[server_name].setup({
-              capabilities = capabilities,
-            })
-          end,
-
-          ["jsonls"] = function()
-            lspconfig["jsonls"].setup(vim.tbl_deep_extend("force", {}, {
-              capabilities = capabilities,
-            }, servers.jsonls))
-          end,
-          ["yamlls"] = function()
-            lspconfig["yamlls"].setup(vim.tbl_deep_extend("force", {}, {
-              capabilities = capabilities,
-            }, servers.yamlls))
-          end,
-          ["clangd"] = function()
-            lspconfig["clangd"].setup(vim.tbl_deep_extend("force", {}, {
-              capabilities = capabilities,
-            }, servers.clangd))
-          end,
-        },
-      })
-
       vim.diagnostic.config({
         virtual_text = true,
         signs = true,
