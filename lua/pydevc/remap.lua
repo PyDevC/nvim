@@ -1,16 +1,15 @@
 vim.g.mapleader = " "
 
-
 local function map(mode, lhs, rhs, opt)
-	local opts = opt or {}
-	opts.silent = true
-	vim.keymap.set(mode, lhs, rhs, opts)
+  local opts = opt or {}
+  opts.silent = true
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 -- map("n", "<leader>pv", vim.cmd.Ex) -- stay just in case i delete oil.lua
 
 -- map("i", "jk", "<Esc>")
-map({"i","c"}, "<C-c>", "<Esc>") -- changed my keyboard keymappings to home row mod
+map({ "i", "c" }, "<C-c>", "<Esc>") -- changed my keyboard keymappings to home row mod
 
 -- map("i", "jk", <Esc>) -- just in case I switch to normal keyboard
 -- Basic commands
@@ -20,7 +19,16 @@ map({"i","c"}, "<C-c>", "<Esc>") -- changed my keyboard keymappings to home row 
 
 map("x", "<leader>p", [["_dP]])
 
-map({"n", "v"}, "<leader>y", [["+y]])
+map({ "n", "v" }, "<leader>y", [["+y]])
+
+-- toggle colorcolumn
+map("n", "<leader>c", function()
+  if vim.wo.colorcolumn == "80" then
+    vim.wo.colorcolumn = "0"
+  else
+    vim.wo.colorcolumn = "80"
+  end
+end)
 
 -- tmux-sessionizer
 map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
