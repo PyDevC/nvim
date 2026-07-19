@@ -30,6 +30,8 @@ map("n", "<leader>c", function()
   end
 end)
 
+map("n", "-", "-") -- I don't know why it is not wroking by default
+
 -- tmux-sessionizer
 map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
