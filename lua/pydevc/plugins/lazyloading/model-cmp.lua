@@ -1,7 +1,7 @@
 return {
   dir = "~/work/project/model-cmp.nvim",
   lazy = true,
-  cmd = { "ModelCmp" },
+  cmd = { "ModelCmp", "ModelCmpStart", "ModelCmpStop", "ModelCmpLogs" },
   config = function()
     require("model_cmp").setup({
       requests = {
@@ -20,7 +20,7 @@ return {
       },
 
       virtualtext = {
-        enable = false,
+        enable = true,
         type = "inline",
 
         style = { -- This is just a highlight group
@@ -31,5 +31,6 @@ return {
       },
     })
     vim.keymap.set("i", "<C-s>", "<cmd>ModelCmp capture first<CR>")
+    vim.keymap.set("i", "<C-a>", "<cmd>ModelCmp capture all<CR>")
   end,
 }

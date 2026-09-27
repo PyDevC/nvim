@@ -19,7 +19,7 @@ return {
 
     -- Mason DAP Setup
     mason_dap.setup({
-      ensure_installed = { "codelldb" }, 
+      ensure_installed = { "codelldb" },
       automatic_installation = true,
       handlers = {
         function(config)
@@ -39,7 +39,7 @@ return {
         end,
         cwd = "${workspaceFolder}",
         stopOnEntry = false,
-        disableASLR = false, 
+        disableASLR = false,
       },
       {
         name = "Attach to running process",

@@ -6,12 +6,21 @@ lspkind.init {}
 
 local cmp = require "cmp"
 
-cmp.setup {
-  sources = {
-    { name = "nvim_lsp" },
+local lsp_enabled = true
+
+local sources = function()
+  local srcs = {
     { name = "path" },
     { name = "buffer" },
-  },
+  }
+  if lsp_enabled then
+    table.insert(srcs, 1, { name = "nvim_lsp" })
+  end
+  return srcs
+end
+
+cmp.setup {
+  sources = sources(),
   mapping = {
     ["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
     ["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
@@ -32,6 +41,12 @@ cmp.setup.filetype({ "sql" }, {
     { name = "buffer" },
   },
 })
+
+vim.keymap.set("n", "<leader>no", function()
+  lsp_enabled = not lsp_enabled
+  cmp.setup { sources = sources() }
+  vim.notify("LSP autocomplete " .. (lsp_enabled and "enabled" or "disabled"))
+end, { desc = "Toggle LSP autocomplete", silent = true })
 
 local ls = require "luasnip"
 ls.config.set_config {
