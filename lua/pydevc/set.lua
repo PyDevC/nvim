@@ -1,6 +1,3 @@
-vim.opt.guicursor = ""
-
-
 vim.opt.autoindent = true
 vim.opt.backup = false
 
