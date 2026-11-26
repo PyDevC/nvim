@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
 
 local function map(mode, lhs, rhs, opt)
-  local opts = opt or {}
-  opts.silent = true
-  vim.keymap.set(mode, lhs, rhs, opts)
+    local opts = opt or {}
+    opts.silent = true
+    vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 -- map("n", "<leader>pv", vim.cmd.Ex) -- stay just in case i delete oil.lua
@@ -23,11 +23,11 @@ map({ "n", "v" }, "<leader>y", [["+y]])
 
 -- toggle colorcolumn
 map("n", "<leader>c", function()
-  if vim.wo.colorcolumn == "80" then
-    vim.wo.colorcolumn = "0"
-  else
-    vim.wo.colorcolumn = "80"
-  end
+    if vim.wo.colorcolumn == "80" then
+        vim.wo.colorcolumn = "0"
+    else
+        vim.wo.colorcolumn = "80"
+    end
 end)
 
 map("n", "-", "-") -- I don't know why it is not wroking by default
