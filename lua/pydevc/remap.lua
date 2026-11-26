@@ -30,7 +30,7 @@ map("n", "<leader>c", function()
     end
 end)
 
-map("n", "-", "-") -- I don't know why it is not wroking by default
+map("n", "-", "-") -- I don't know why it is not working by default
 
 -- tmux-sessionizer
 map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -48,7 +48,7 @@ map("n", "=ap", "ma=ap'a")
 
 -- what are these used for???
 map("n", "<C-n>", "<cmd>cnext<CR>zz")
-map("n", "<C-j>", "<cmd>cprev<CR>zz")
+map("n", "<C-j>", "<cmd>cprev<CR>zz") -- this won't work since I have this setup for harpoon
 map("n", "<leader>k", "<cmd>lnext<CR>zz")
 map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
